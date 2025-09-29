@@ -2,4 +2,5 @@
 
 int main() {
 	printf("ハローワールド\n");
+	return 0;
 }
