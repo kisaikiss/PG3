@@ -3,10 +3,10 @@
 
 int main() {
 	//1970年の山手線の駅名リストを作成
-	std::list<const char*> yamanote{"Tokyo","Kanda","Akihabara","Okachimachi","Ueno","Uguisudani","Nippori",
-	"Tabata","Komagome","Sugamo","Otsuka","Ikebukuro","Mejiro","Takabanobaba","Shin-Okubo","Shinjuku",
-	"Yoyogi","Harajuku","Shibuya","Ebisu","Meguro","Gotanda","Osaki","Shinagawa","Tamachi","Hamamatucho","Shimbashi","Yurakucho"};
-	
+	std::list<const char*> yamanote{ "Tokyo", "Kanda", "Akihabara", "Okachimachi", "Ueno", "Uguisudani", "Nippori",
+	"Tabata", "Komagome", "Sugamo", "Otsuka", "Ikebukuro", "Mejiro", "Takabanobaba", "Shin-Okubo", "Shinjuku",
+	"Yoyogi", "Harajuku", "Shibuya", "Ebisu", "Meguro", "Gotanda", "Osaki", "Shinagawa", "Tamachi", "Hamamatucho", "Shimbashi", "Yurakucho" };
+
 	//1970年の山手線の駅名リストを表示
 	printf("1970\n");
 	for (auto itr = yamanote.begin(); itr != yamanote.end(); ++itr) {
@@ -19,7 +19,7 @@ int main() {
 	for (auto itr = yamanote.begin(); itr != yamanote.end(); ++itr) {
 		//イテレータの要素が田端だった場合、前に西日暮里を追加して表示する
 		if (*itr == "Tabata") {
-			itr = yamanote.insert(itr,"Nishi-Nippori");
+			itr = yamanote.insert(itr, "Nishi-Nippori");
 			printf(*itr);
 			printf("\n");
 			++itr;
@@ -33,7 +33,7 @@ int main() {
 	for (auto itr = yamanote.begin(); itr != yamanote.end(); ++itr) {
 		//イテレータの要素が田町だった場合、前に高輪ゲートウェイを追加して表示する
 		if (*itr == "Tamachi") {
-			itr = yamanote.insert(itr, "Takanawa-Gateway");
+			itr = yamanote.insert(itr, "Takanawa Gateway");
 			printf(*itr);
 			printf("\n");
 			++itr;
