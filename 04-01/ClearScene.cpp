@@ -1,14 +1,14 @@
-#include "TitleScene.h"
+#include "ClearScene.h"
 #include "InputManager.h"
 
 #include <Novice.h>
 
-void TitleScene::Update() {
+void ClearScene::Update() {
 	if (InputManager::GetInstance()->GetKeys()[DIK_SPACE] && !InputManager::GetInstance()->GetPreKeys()[DIK_SPACE]) {
-		sSceneNo = SCENE::GAME;
+		sSceneNo = SCENE::TITLE;
 	}
 }
 
-void TitleScene::Draw() {
-	Novice::ScreenPrintf(20, 20, "Title");
+void ClearScene::Draw() {
+	Novice::ScreenPrintf(20, 20, "Clear");
 }

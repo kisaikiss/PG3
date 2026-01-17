@@ -35,6 +35,27 @@
     <ClCompile Include="GameScene.cpp">
       <Filter>KamataEngine</Filter>
     </ClCompile>
+    <ClCompile Include="CharacterBase.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="MathStructs.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerBullet.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="MathCalculations.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="ClearScene.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\KamataEngine\DirectXGame\audio\Audio.h">
@@ -123,5 +144,12 @@
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="TitleScene.h" />
     <ClInclude Include="GameScene.h" />
+    <ClInclude Include="CharacterBase.h" />
+    <ClInclude Include="MathStructs.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerBullet.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="MathCalculations.h" />
+    <ClInclude Include="ClearScene.h" />
   </ItemGroup>
 </Project>

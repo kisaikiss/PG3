@@ -1,4 +1,8 @@
 #pragma once
+
+/// <summary>
+/// シングルトンのインプットマネージャ
+/// </summary>
 class InputManager final {
 public:
 	static InputManager* GetInstance() {
@@ -6,6 +10,9 @@ public:
 		return &instance;
 	}
 
+	/// <summary>
+	/// 更新処理
+	/// </summary>
 	void Update();
 
 	char* GetKeys() { return keys_; }

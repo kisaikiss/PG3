@@ -1,8 +1,11 @@
 #include "GameManager.h"
 #include "Novice.h"
 #include "InputManager.h"
+#include "CharacterBase.h"
 
 #include "TitleScene.h"
+#include "GameScene.h"
+#include "ClearScene.h"
 
 using namespace std;
 
@@ -10,6 +13,9 @@ void GameManager::Init() {
 	currentSceneNo_ = SCENE::TITLE;
 	prevSceneNo_ = SCENE::TITLE;
 	sceneMap_[SCENE::TITLE] = make_unique<TitleScene>();
+	sceneMap_[SCENE::GAME] = make_unique<GameScene>();
+	sceneMap_[SCENE::CLEAR] = make_unique<ClearScene>();
+	CharacterBase::Initialize();
 }
 
 int GameManager::Run() {
