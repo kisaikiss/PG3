@@ -94,16 +94,20 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int) {
 		Novice::DrawBox(0, 0, 600, 600, 0.0f, BLACK, kFillModeSolid);
 
 		//マップの描画
-		for (size_t y = 0; y < mapData.size(); y++) {
-			for (size_t x = 0; x < mapData[y].size(); x++) {
-				//もしmap[y][x]が0以外なら
-				if (mapData[y][x]) {
-					//ブロックを描画する
-					Novice::DrawSprite(static_cast<int>(x) * kBlockSize, static_cast<int>(y) * kBlockSize, blockGraph, 1.0f, 1.0f, 0.0f, WHITE);
-				}
+		{
+			std::lock_guard<std::mutex> lock(mutex);
+			for (size_t y = 0; y < mapData.size(); y++) {
+				for (size_t x = 0; x < mapData[y].size(); x++) {
+					//もしmap[y][x]が0以外なら
+					if (mapData[y][x]) {
+						//ブロックを描画する
+						Novice::DrawSprite(static_cast<int>(x) * kBlockSize, static_cast<int>(y) * kBlockSize, blockGraph, 1.0f, 1.0f, 0.0f, WHITE);
+					}
 
+				}
 			}
 		}
+		
 		///
 		/// ↑描画処理ここまで
 		///
